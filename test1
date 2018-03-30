@@ -1,0 +1,21 @@
+package com.gmail.a1ekskosyak;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			Scanner sc = new Scanner(System.in);
+			double litrPrice = 27.5;
+			double rashod = 9.8;
+			int length;
+			double money;
+			System.out.println("Input length");
+			length = sc.nextInt();
+			
+			money = rashod / 100.0 * litrPrice * length * 2.0;
+			System.out.println("Poezdka oboshlas v: " + money);
+	}
+
+}
