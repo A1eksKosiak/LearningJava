@@ -1,0 +1,17 @@
+package com.gmail.a1ekskosyak;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		double radius;
+		Scanner sc = new Scanner(System.in);
+		/*Request user to insert radius*/
+		System.out.println("Input radius");
+		radius = sc.nextDouble();
+		double length = 2.0 * Math.PI * radius;
+		System.out.println(length);
+	}
+
+}
