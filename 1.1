@@ -1,0 +1,29 @@
+package com.gmail.a1ekskosyak;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Input 5-digit number");
+		/* Read input from user */
+		int fullNumber = sc.nextInt();
+		/*Find First full digit*/
+		int a = fullNumber / 10000;
+		System.out.println(a);
+		/*Find Second full digit*/
+		int b = fullNumber % 10000 / 1000;
+		System.out.println(b);
+		/*Find Third full digit*/
+		int c = fullNumber % 1000 / 100;
+		System.out.println(c);
+		/*Find Fourth full digit*/
+		int d = fullNumber % 100 / 10;
+		System.out.println(d);
+		/*Find Fifth full digit*/
+		int e = fullNumber % 10;
+		System.out.println(e);
+	}
+
+}
