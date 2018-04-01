@@ -1,0 +1,37 @@
+package com.gmail.a1ekskosyak;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int a;
+		int b;
+		int c;
+		int d;
+		int max;
+		/*Request user to input four numbers*/
+		System.out.println("Input First number");
+		a = sc.nextInt();
+		System.out.println("Input Second number");
+		b = sc.nextInt();
+		System.out.println("Input Third number");
+		c = sc.nextInt();
+		System.out.println("Input Fourth number");
+		d = sc.nextInt();
+		/*Find the biggest number*/
+		max = a;									/*First number is the biggest*/
+		if (b > max) {								/*Check if Second number is bigger*/
+			max = b;								/*If Second number is the the biggest - nominate Second as the biggest*/
+		}
+		if (c > max) {								/*Check if Third number is bigger*/
+			max = c;								/*If Third number is the the biggest - nominate Third as the biggest*/
+		}	
+		if (d > max) {								/*Check if Fourth number is bigger*/
+			max = d;								/*If Fourth number is the the biggest - nominate Fourth as the biggest*/
+		}
+			System.out.println("Max = " + max);		/*Print out the biggest number*/
+	}
+	
+}
