@@ -5,23 +5,23 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		int e = 4; 				/* Number of entrances in the building */
-		int a = 4; 				/* Number of apartments per floor */
-		int f = 9; 				/* Number of floors per entrance */
-		int entrance; 				/* Our entrance */
-		int floor;				/* Our floor */
-		int insertedApartment; 			/* Apartment number, inserted by user */
-		int maxApPerEntrance; 			/* Max number of apartments in one entrance */
-		int apsLeft; 				/* Apartments left after dividing */
+		int e = 4; 					/* Number of entrances in the building */
+		int a = 4; 					/* Number of apartments per floor */
+		int f = 9; 					/* Number of floors per entrance */
+		int entrance; 					/* Our entrance */
+		int floor;					/* Our floor */
+		int insertedApartment; 				/* Apartment number, inserted by user */
+		int maxApPerEntrance; 				/* Max number of apartments in one entrance */
+		int apsLeft; 					/* Apartments left after dividing */
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Insert apartment number"); /* Request user to insert apartment number */
+		System.out.println("Insert apartment number"); 	/* Request user to insert apartment number */
 		insertedApartment = scan.nextInt();
 		insertedApartment -= 1;
-		maxApPerEntrance = f * a; 		/* Finding max apartments per entrance */
+		maxApPerEntrance = f * a; 			/* Finding max apartments per entrance */
 		entrance = insertedApartment / maxApPerEntrance; /* Finding entrance number */
 		apsLeft = insertedApartment % maxApPerEntrance; /* Finding number of apartments left after dividing */
 		entrance += 1;
-		floor = apsLeft / a; 			/* Finding floor number */
+		floor = apsLeft / a; 				/* Finding floor number */
 		floor += 1;
 		insertedApartment += 1;
 		if (insertedApartment <= maxApPerEntrance * e) {
