@@ -1,0 +1,21 @@
+package com.gmail.a1ekskosyak;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		int day;
+		int year;
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Insert year"); /* Request user to insert year */
+		year = scan.nextInt();
+		day = 365;
+		if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+			day = 366;
+		}
+		System.out.println(year + " year has " + day + " days.");
+		scan.close();
+	}
+
+}
