@@ -25,6 +25,7 @@ public class Main {
 		}else {
 			System.out.println("The point with coordinates " + x + ", " + y + " is not in the circle.");			
 		}
+		scan.close();
 	}
 
 }
