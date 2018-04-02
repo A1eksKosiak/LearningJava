@@ -1,0 +1,30 @@
+package com.gmail.a1ekskosyak;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		double radius = 4.0;
+		double x;
+		double y;
+		double a; /* Circle center on on the x-axis */
+		double b; /* Circle center on on the y-axis */
+		a = 0;
+		b = 0;
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Insert x");
+		x = scan.nextDouble();
+		System.out.println("Insert y");
+		y = scan.nextDouble();
+		if (Math.pow((x - a), 2) + Math.pow((y - b), 2) < Math.pow(radius, 2)) {
+			System.out.println("The point with coordinates " + x + ", " + y + " is inside of the circle.");
+		/* Below "else if" most likely will not ever be used */
+		}else if (Math.pow((x - a), 2) + Math.pow((y - b), 2) == Math.pow(radius, 2)) {
+			System.out.println("The point with coordinates " + x + ", " + y + " is on circumference of the circle.");			
+		}else {
+			System.out.println("The point with coordinates " + x + ", " + y + " is not in the circle.");			
+		}
+	}
+
+}
