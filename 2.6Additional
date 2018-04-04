@@ -1,0 +1,43 @@
+package com.gmail.a1ekskosyak;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		double x0; /* User's point on the x-axis */
+		double y0; /* User's point on the y-axis */
+		double xA; /* First vertex of a triangle on the x-axis */
+		double xB; /* Second vertex of a triangle on the x-axis */
+		double xC; /* Third vertex of a triangle on the x-axis */
+		double yA; /* First vertex of a triangle on the y-axis */
+		double yB; /* Second vertex of a triangle on the y-axis */
+		double yC; /* Third vertex of a triangle on the y-axis */
+		double AB0;
+		double BC0;
+		double AC0;
+		xA = 0.0;
+		yA = 0.0;
+		xB = 4.0;
+		yB = 4.0;
+		xC = 6.0;
+		yC = 1.0;
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Insert x");
+		x0 = scan.nextDouble();
+		System.out.println("Insert y");
+		y0 = scan.nextDouble();
+		AB0 = (xA-x0)*(yB-yA)-(xB-xA)*(yA-y0);
+		BC0 = (xB-x0)*(yC-yB)-(xC-xB)*(yB-y0);
+		AC0 = (xC-x0)*(yA-yC)-(xA-xC)*(yC-y0);		
+		if ((AB0 > 0 && BC0 > 0 && AC0 > 0) || (AB0 < 0 && BC0 < 0 && AC0 < 0)) {
+			System.out.println("Point is inside of the triangle.");
+		}else if (AB0 == 0 || BC0 == 0 || AC0 == 0) {
+			System.out.println("Point is on one of the sides of the triangle.");
+		}else {
+			System.out.println("Point is outside of the triangle.");
+		}
+		scan.close();
+	}
+
+}
