@@ -1,0 +1,43 @@
+package com.gmail.a1ekskosyak;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		int fullNumber;
+		int a;
+		int b;
+		int c;
+		int d;
+		int e;
+		int f;
+		int aF;
+		int bE;
+		int cD;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Input 6-digit number");
+		/* Read input from user */
+		fullNumber = sc.nextInt();
+		/*Find First full digit*/
+		a = fullNumber % 1000000 / 100000;
+		/*Find Second full digit*/
+		b = fullNumber % 100000 / 10000;
+		/*Find Third full digit*/
+		c = fullNumber % 10000 / 1000;
+		/*Find Fourth full digit*/
+		d = fullNumber % 1000 / 100;
+		/*Find Fifth full digit*/
+		e = fullNumber % 100 / 10;
+		/*Find Sixth full digit*/
+		f = fullNumber % 10;
+		/* Check if First & Sixth, Second & Fifth, Third & Fourth letters are the same */
+		if ((a == f) && (b == e) && (c == d)) {
+					System.out.println("Number " + fullNumber + " is a palindrome!");
+		}else {
+			System.out.println("Number " + fullNumber + " is not a palindrome! :(");			
+		}
+		sc.close();
+	}
+
+}
