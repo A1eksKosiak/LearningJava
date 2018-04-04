@@ -1,0 +1,51 @@
+package com.gmail.a1ekskosyak;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		int fullNumber;
+		int a;
+		int b;
+		int c;
+		int d;
+		int aB;
+		int cD;
+		int e;
+		int f;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Input 4-digit number");
+		/* Read input from user */
+		fullNumber = sc.nextInt();
+		/*Find First full digit*/
+		a = fullNumber % 10000 / 1000;
+		/*Find Second full digit*/
+		b = fullNumber % 1000 / 100;
+		/*Find Third full digit*/
+		c = fullNumber % 100 / 10;
+		/*Find Fourth full digit*/
+		d = fullNumber % 10;
+		aB = a + b;
+		cD = c + d;
+		/* Check if first 2 digits are higher than 10 */
+		if (aB >= 10) {
+			e = aB % 100 / 10;
+			f = aB % 10;
+			aB = e +f;
+		}
+		/* Check if last 2 digits are higher than 10 */
+		if (cD >= 10) {
+			e = cD % 100 / 10;
+			f = cD % 10;
+			cD = e +f;
+		}
+		if ((aB) == (cD)) {
+			System.out.println("Congratulations! Your ticket number " + fullNumber + " is a lucky ticket!");
+		} else {
+			System.out.println("Sorry, your ticket number " + fullNumber + " is not a lucky ticket. :(");
+		}
+		sc.close();
+	}
+
+}
