@@ -1,0 +1,26 @@
+package com.gmail.a1ekskosyak;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int number;
+		long sum;		/* Using long as 13! and next, is more than int max value. */
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Insert number from 5 to 15");
+		number = scan.nextInt();
+		if (number <= 4 || number >= 16) {
+			System.out.println("Wrong number!");
+		} else {
+			sum = 1;
+			for (int i = number; i > 0; i--) {
+				sum = sum * i;
+			}
+			System.out.println(number + "! = " + sum);
+		}
+		scan.close();
+	}
+
+}
