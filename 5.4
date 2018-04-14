@@ -1,0 +1,24 @@
+package com.gmail.a1ekskosyak;
+
+//import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Insert string");
+		String line = scan.nextLine();
+		// char[] a = new char[line.length()];
+		char[] a = line.toCharArray();
+		int num = 0;
+		for (int i = 0; i < a.length; i++) {
+			if (a[i] == 'b') {
+				num++;
+			}
+		}
+		System.out.println(num);
+		scan.close();
+	}
+
+}
