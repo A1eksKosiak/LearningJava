@@ -1,0 +1,28 @@
+package com.gmail.a1ekskosyak;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Insert array size");
+		int n = scan.nextInt();
+		int[] array = new int[n];
+		int temp;
+		temp = 0;
+		for (int i = 0; i < array.length; i++) {
+			array[i] = (int) (Math.random() * 10);
+		}
+		System.out.println("Basic array: " + Arrays.toString(array));
+		for (int i = 0; i < array.length - i; i++) {
+			temp = array[i];
+			array[i] = array[array.length - 1 - i];
+			array[array.length - 1 - i] = temp;
+		}
+		System.out.println("Mirror array: " + Arrays.toString(array));
+		scan.close();
+	}
+
+}
