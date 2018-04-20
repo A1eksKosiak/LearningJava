@@ -98,22 +98,16 @@ public class Main {
 					}
 				}
 				if (i == 9) {
-					for (int j = 0; j < 91; j++) {
-						if (moneyArray[i] > 10 && moneyArray[i] < 20) {
-							centMoney += numbers[moneyArray[i]];
-							break;
-						}
-						if (moneyArray[i] == 10) {
-							centMoney += numbers[j];
-						} else if (moneyArray[i] >= 20) {
-							centMoney += numbers[(moneyArray[i] / 10) * 10];
-							centMoney += numbers[(moneyArray[i] % 10)];
-						} else {
-							centMoney += numbers[j];
-						}
-						break;
+					if (moneyArray[i] > 10 && moneyArray[i] < 20) {
+						centMoney += numbers[moneyArray[i]];
+					} else if (moneyArray[i] == 10) {
+						centMoney += numbers[moneyArray[i]];
+					} else if (moneyArray[i] >= 20) {
+						centMoney += numbers[(moneyArray[i] / 10) * 10];
+						centMoney += numbers[(moneyArray[i] % 10)];
+					} else {
+						centMoney += numbers[moneyArray[i]];
 					}
-
 				}
 				if (i > 1 && tempMoneyAmmount >= 1_000_000 && million) {
 					money += numbers[22];
