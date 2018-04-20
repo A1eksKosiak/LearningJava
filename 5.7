@@ -40,7 +40,7 @@ public class Main {
 			moneyAmmount = moneyAmmount % 10;
 			moneyArray[8] = (int) (moneyAmmount / 1);
 			moneyAmmount = moneyAmmount % 1;
-			moneyArray[9] = (int) (moneyAmmount * 100);
+			moneyArray[9] = Math.round((int) (moneyAmmount * 100));
 
 			numbers[0] = "";
 			numbers[1] = "one ";
@@ -108,11 +108,10 @@ public class Main {
 						} else if (moneyArray[i] >= 20) {
 							centMoney += numbers[(moneyArray[i] / 10) * 10];
 							centMoney += numbers[(moneyArray[i] % 10)];
-							break;
 						} else {
 							centMoney += numbers[j];
-							break;
 						}
+						break;
 					}
 
 				}
